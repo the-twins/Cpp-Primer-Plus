@@ -10,8 +10,8 @@
 
 using namespace std;
 
-int print_first_string();
-int print_second_string();
+void print_first_string();
+void print_second_string();
 
 int main()
 {
@@ -23,16 +23,12 @@ int main()
     return 0;
 }
 
-int print_first_string()
+void print_first_string()
 {
     cout << "Three blind mice" << endl;
-    
-    return 0;
 }
 
-int print_second_string()
+void print_second_string()
 {
     cout << "See how they run" << endl;
-
-    return 0;
 }
