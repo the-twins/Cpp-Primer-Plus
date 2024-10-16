@@ -8,7 +8,7 @@
 
 using namespace std;
 
-void time(int hours, int minutes);
+void time(unsigned short hours, unsigned short minutes);
 
 int main()
 {
@@ -22,7 +22,7 @@ int main()
     return 0;
 }
 
-void time(int hours, int minutes)
+void time(unsigned short hours, unsigned short minutes)
 {
     cout << "Time: " << hours << ":" << minutes << endl;
 }
