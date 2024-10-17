@@ -25,11 +25,11 @@ int main()
     cout << "Enter your weight in pounds: ";
     cin >> weight_in_pounds;
     unsigned short height_in_inches;
-    height_in_inches = feet / InchInFeet + inches;
+    height_in_inches = feet * InchInFeet + inches;
     float height_in_meters = height_in_inches * HeightInMeters;
     float weight_in_kg;
     weight_in_kg = weight_in_pounds / KgInPound;
-    float bmi = weight_in_kg / height_in_meters * height_in_meters;
+    float bmi = weight_in_kg / (height_in_meters * height_in_meters);
     cout << "Your BMI is " << bmi << endl;
     
     return 0;
