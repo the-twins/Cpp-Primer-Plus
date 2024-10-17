@@ -11,9 +11,10 @@ const unsigned short InchInFeet = 12;
 int main()
 {
     unsigned short inches;
-    cout << "Enter your height in inches:_____\b\b\b\b\b";
+    cout << "Enter your height in inches:___\b\b\b";
     cin >> inches;
-    cout << "Your height in feet = " << inches / InchInFeet << endl;
+    cout << "Your height in feet is " << inches / InchInFeet << " and " << inches % InchInFeet << " inches" 
+    << endl;
     
     return 0;
 }
