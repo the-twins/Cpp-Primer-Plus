@@ -14,10 +14,9 @@ int main()
     float liters;
     cout << "Enter distance in kilometers: ";
     cin >> distance_km;
-    cout << "Enter how many liters gasoline you have used: ";
+    cout << "Enter how many liters of gasoline you have used: ";
     cin >> liters;
     cout << "Gasoline consumption per 100 km is " << Km * liters / distance_km << endl;
 
     return 0;
 }
-    
