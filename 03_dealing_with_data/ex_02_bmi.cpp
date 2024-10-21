@@ -12,7 +12,7 @@ using namespace std;
 
 const unsigned short InchInFeet = 12;
 const float HeightInMeters = 0.0254;
-const float KgInPound = 2.2;
+const float LbInKg = 2.2;
 
 int main()
 {
@@ -28,12 +28,9 @@ int main()
     height_in_inches = feet * InchInFeet + inches;
     float height_in_meters = height_in_inches * HeightInMeters;
     float weight_in_kg;
-    weight_in_kg = weight_in_pounds / KgInPound;
+    weight_in_kg = weight_in_pounds / LbInKg;
     float bmi = weight_in_kg / (height_in_meters * height_in_meters);
     cout << "Your BMI is " << bmi << endl;
     
     return 0;
 }
-
-    
-    
