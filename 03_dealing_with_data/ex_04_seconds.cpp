@@ -9,8 +9,8 @@
 
 using namespace std;
 
-const unsigned int SecInDay = 86400;
-const unsigned short SecInHour = 3600;
+const unsigned short HoursInDay = 24;
+const unsigned short MinInHour = 60;
 const unsigned short SecInMin = 60;
 
 int main ()
@@ -19,15 +19,13 @@ int main ()
     cout << "Enter the number of seconds: ";
     cin >> seconds;
     unsigned int days;
-    unsigned short hours;
-    unsigned short min;
-    unsigned short sec;
-    days = seconds / SecInDay;
-    hours = (seconds - (days * SecInDay)) /  SecInHour;
-    min = ((seconds - (days * SecInDay)) - (hours * SecInHour)) / SecInMin;
-    sec = seconds - (days * SecInDay) - (hours * SecInHour) - (min * SecInMin);
-    cout << seconds << " seconds = " << days << " days, " << hours << " hours, " << min << " minutes, "
-    << sec << " seconds" << endl;
+    unsigned int hours;
+    unsigned int min;
+    min = seconds / SecInMin;
+    hours = min /  MinInHour;
+    days = hours / HoursInDay;
+    cout << seconds << " seconds = " << days << " days, " << hours % HoursInDay << " hours, "
+    << min % MinInHour << " minutes, " << seconds % SecInMin << " seconds" << endl;
     
     return 0;
 }
