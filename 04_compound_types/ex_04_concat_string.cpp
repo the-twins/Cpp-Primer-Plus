@@ -13,7 +13,7 @@ using namespace std;
 int main()
 {
     string f_name;
-    cout << "Enter your first name: :";
+    cout << "Enter your first name: ";
     getline(cin, f_name);
     string l_name;
     cout << "Enter your last name: ";
