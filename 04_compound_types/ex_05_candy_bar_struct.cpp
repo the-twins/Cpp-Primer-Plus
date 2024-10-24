@@ -23,7 +23,7 @@ int main()
         2.3,
         350
     };
-    cout << snack. brand_name << ", " << snack. weight << ", "<< snack.numb_calories 
+    cout << snack.brand_name << ", " << snack.weight << ", " << snack.numb_calories 
     << endl;
     
     return 0;
