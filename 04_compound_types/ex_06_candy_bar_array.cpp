@@ -2,7 +2,6 @@
 // Exercise 5. Write a program that creates an array of three CandyBar structures, 
 // initializes them to values of your choice, and then displays the contents of each
 // structure.
-
 #include <iostream>
 
 using namespace std;
@@ -25,9 +24,9 @@ int main()
         {"Baskin Robbins", 2.2, 270}
     };
     int i;
-    for( i = 0; i < LEN; i++)
+    for(i = 0; i < LEN; i++)
     {
-        cout << snack[i]. brand_name << ", " << snack[i]. weight << ", "
+        cout << snack[i].brand_name << ", " << snack[i].weight << ", "
         << snack[i].numb_calories << endl;
     }
     
