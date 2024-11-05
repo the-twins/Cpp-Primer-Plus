@@ -12,8 +12,8 @@ const unsigned short Months = 12;
 
 int main()
 {
-    string month[Months] = {"January", "February", "March", "April", "May", "Jun", "July", 
-    "August", "September", "October", "November", "December"};
+    string month[Months] = {"January", "February", "March", "April", "May", "June", "July", 
+                            "August", "September", "October", "November", "December"};
     unsigned int books_in_month[Months] = {0};
     unsigned int sum_books = 0;
     for(int count = 0; count < Months; count++)
