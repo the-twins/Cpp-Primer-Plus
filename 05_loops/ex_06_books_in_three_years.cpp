@@ -10,28 +10,26 @@ const unsigned short Years = 3;
 
 int main()
 {
-    string month[Months] = {"January", "February", "March", "April", "May", "Jun", "July", 
-    "August", "September", "October", "November", "December"};
+    string month[Months] = {"January", "February", "March", "April", "May", "June", "July", 
+                            "August", "September", "October", "November", "December"};
+    string count_year[Years] = {"First", "Second", "Third"};
     unsigned int books_in_month[Years][Months] = {0};
     unsigned int sum_books_in_year[Years] = {0};
     unsigned int sum_books_all = 0;
     for(int i = 0; i < Years; i++)
         for(int j = 0; j < Months; j++)
         {
-            if(i == 0)
-                cout << "First year. ";
-            if(i == 1)
-                cout << "Second year. ";
-            if(i == 2)
-                cout << "Third year. ";
-            cout << "Enter the number of books sold in " << month[j] << " : ";
+            cout << count_year[i] << " year. Enter the number of books sold in " 
+            << month[j] << " : ";
             cin >> books_in_month[i][j];
             sum_books_all += books_in_month[i][j];
             sum_books_in_year[i] += books_in_month[i][j];
         }
-    cout << "You sold " << sum_books_in_year[0] << " books in a first year." << endl;
-    cout << "You sold " << sum_books_in_year[1] << " books in a second year." << endl;
-    cout << "You sold " << sum_books_in_year[2] << " books in a third year." << endl;
+    for(int count = 0; count < Years; count++)
+    {   
+        cout << count_year[count] << " year. You sold " << sum_books_in_year[count] << " books."
+            << endl;
+    }       
     cout << "In just " << Years << " years, " << sum_books_all << " books were sold." << endl;
     
     return 0;
