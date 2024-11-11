@@ -17,26 +17,17 @@ using namespace std;
 int main()
 {
     int row = 0;
-    int col = 0;
     int i, j;
     cout << "Enter number of rows: ";
     cin >> row;
-    col = row;
-    char stars_points[row][col];
-    for(i = 0; i < row; i++)
-        for(j = 0; j < col; j++)
-            stars_points[i][j] = '.';
-    j = col - 1;
-    for(i = 0; i < row; i++)
+    int col = row;
+    for(i = row; i >= 1; i--)
     {
-        for(; j < col; j++)
-            stars_points[i][j] = '*';
-        j = (col - 1) - (i + 1);
-    }
-    for(int i = 0; i < row; i++)
-    {
-        for(int j = 0; j < col; j++)
-            cout << stars_points[i][j];
+        for(j = 1; j <= col; j++)
+            if(j > i - 1)
+                cout << "*";
+            else
+                cout << ".";
         cout << endl;
     }
 
