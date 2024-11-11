@@ -21,16 +21,15 @@ int main()
     cout << "l) Lermontov  m) Mayakovsky" << endl;
     cout << "p) Pushkin    y) Yesenin" << endl;
     char choice;
-    cin >> choice;
-    while(choice != 'q')
+    while(true)
     {
+        cin >> choice;
         switch(choice)
         {
             case 'l': cout << "I’m alone on the path just taken;\n";
                       cout << "Glittering, it stretches through the fog;\n";
                       cout << "Quiet night. All harkens to the Maker,\n";
                       cout << "And two stars begin a dialogue.\n";
-                      choice = 'q';
                       break;
             case 'm': cout << "Listen,\n";
                       cout << "if stars are lit\n";
@@ -38,24 +37,21 @@ int main()
                       cout << "It means — someone wants them to be,\n";
                       cout << "that someone deems those specks of spit\n";
                       cout << "magnificent.\n";
-                      choice = 'q';
                       break;
             case 'p': cout << "A captive, alone in a dungeon I dwell,\n";
                       cout << "Entombed in the stillness and murk of a cell.\n";
                       cout << "Outside, in the courtyard, in wild, frenzied play,\n";
                       cout << "My comrade, an eagle, has pounced on his prey.\n";
-                      choice = 'q';
                       break;
             case 'y': cout << "Stars little stars, you're so high and so clear!\n";
                       cout << "What have you got in you, so fascinating?\n";
                       cout << "Stars, deep in thought, so discreet you appear,\n";
                       cout << "What is the power that makes you so tempting?\n";
-                      choice = 'q';
                       break;
             default : cout << "Please enter: l, m, p, or y: ";
-                      cin >> choice;
-                      break;
+                      continue;            
         }
+        break;
     }
     cout << "Bye!" << endl;
 
