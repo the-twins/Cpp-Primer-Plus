@@ -15,24 +15,25 @@ int main()
     cout << "You may enter up to " << Max << " donations <q to terminate>.\n";
     cout << "donation #1: ";
     int i = 0;
+    double total = 0.0;
     while (i < Max && cin >> donation[i]) 
     {  
+        total += donation[i]; 
         if (++i < Max)
             cout << "donation #" << i+1 << ": ";
     }
-    double total = 0.0;
-    for (int j = 0; j < i; j++)
-    total += donation[j];
+    if (i == 0 || total == 0)
+    {
+        cout << "No donations. Bye." << endl;
+        return 0;
+    }
     double average_donation = total / i;
-    if (i == 0)
-        cout << "No donations\n";
-    else
-        cout << average_donation << " = average of " << i << " donations." << endl;
+    cout << average_donation << " = average of " << i << " donations." << endl;
     int number_larger = 0;
     for (int count = 0; count < i; count++)
         if(donation[count] > average_donation)
             number_larger++;
-    cout << number_larger << " numbers of donation larger than average donations." << endl; 
+    cout << number_larger << " donations are larger than average." << endl; 
     cout << "Done." << endl;
     
     return 0;
