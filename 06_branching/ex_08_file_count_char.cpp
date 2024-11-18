@@ -20,12 +20,8 @@ int main()
     }
     char ch;
     int count = 0;
-    inFile >> ch;
-    while (inFile.good())
-    {
+    while (inFile.get(ch))
         ++count;
-        inFile >> ch;
-    }
     if (inFile.eof())
         cout << "End of file reached.\n";
     else if (inFile.fail())
