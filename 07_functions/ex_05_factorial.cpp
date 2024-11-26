@@ -7,18 +7,18 @@
 
 using namespace std;
 
-unsigned int factorial(unsigned int n);
+long factorial(short n);
 
 int main()
 {
     cout << "Enter a number to calculate the factorial: ";
-    unsigned int numb;
+    short numb;
     while(cin >> numb)
     {
-        if(numb == 0)
-            cout << "0! = 1" << endl;
-        else if (numb >= 1)
+        if (numb >= 1)
             cout << numb << "! = " << factorial(numb) << endl;
+        else
+            cout << "Only positive number input is accepted." << endl;
         cout << "Enter a number to calculate the factorial (q to quit): ";
     }
     cout << "Bye!" << endl;
@@ -26,10 +26,10 @@ int main()
     return 0;
 }
 
-unsigned int factorial(unsigned int n)
+long factorial(short n)
 {
-    if(n == 1)
-        return n;
+    if(n == 0)
+            return 1;
     else
         return n * factorial(n - 1);
 }
