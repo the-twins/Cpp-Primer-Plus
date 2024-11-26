@@ -14,7 +14,7 @@
 
 using namespace std;
 
-void upper_string(string text);
+string upper_string(string text);
 
 int main()
 {
@@ -22,7 +22,7 @@ int main()
     cout << "Enter a string (q to quit): ";
     while (getline(cin, text) && text != "q")
     {
-        upper_string(text);
+        cout << upper_string(text) << endl;
         cout << "Enter a string (q to quit): ";
     }
     cout << "Bye." << endl;
@@ -30,12 +30,12 @@ int main()
     return 0;
 }
 
-void upper_string(string text)
+string upper_string(string text)
 {
     for (int i = 0; i < text.length(); i++)
     {
         if(islower(text[i]))
             text[i] = toupper(text[i]);
     }
-    cout << text << endl;
+    return text;
 }
