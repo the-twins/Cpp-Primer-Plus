@@ -8,29 +8,29 @@ using namespace std;
 
 int Size = 10;
 
-int input_ar(int array[], int n);
-void display_ar(int array[], int n);
-double average(int array[], int n, int count);
+int input_ar(int scores[], int n);
+void display_ar(int scores[], int count);
+double average(int scores[], int count);
 
 int main()
 {
-    int array[Size] = {0};
-    cout << "Enter up to 10 golf scores (press q to terminate input): ";
-    int count = input_ar(array, Size);
-    display_ar(array, Size);
-    cout << "Average = " << average(array, Size, count) << endl;
+    int scores[Size] = {0};
+    int count = input_ar(scores, Size);
+    display_ar(scores, count);
+    cout << "Average = " << average(scores, count) << endl;
     
     return 0;
 }
 
-int input_ar(int array[], int n)
+int input_ar(int scores[], int n)
 {
+    cout << "Enter up to 10 golf scores (press q to terminate input): ";
     int i;
     char temp = 0;
     int count = 0;
     for(i = 0; i < n; i++)
     {    
-        while (!(cin >> array[i])) 
+        while (!(cin >> scores[i])) 
         {
             cin.clear(); 
             return count;
@@ -41,20 +41,20 @@ int input_ar(int array[], int n)
     return count;
 }
 
-void display_ar(int array[], int n)
+void display_ar(int scores[], int count)
 {
     int i;
-    for(i = 0; i < n; i++)
-        cout << array[i] << " ";
+    for(i = 0; i < count; i++)
+        cout << scores[i] << " ";
     cout << endl;
 }
 
-double average(int array[], int n, int count)
+double average(int scores[], int count)
 {
     int i;
     double sum = 0.0;
-    for(i = 0; i < n; i++)
-        sum += array[i];
+    for(i = 0; i < count; i++)
+        sum += scores[i];
     
     return sum / count;
 }
