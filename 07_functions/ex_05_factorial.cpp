@@ -15,10 +15,10 @@ int main()
     short numb;
     while(cin >> numb)
     {
-        if (numb >= 1)
+        if (numb >= 0)
             cout << numb << "! = " << factorial(numb) << endl;
         else
-            cout << "Only positive number input is accepted." << endl;
+            cout << "Only non-negative number input is accepted" << endl;
         cout << "Enter a number to calculate the factorial (q to quit): ";
     }
     cout << "Bye!" << endl;
