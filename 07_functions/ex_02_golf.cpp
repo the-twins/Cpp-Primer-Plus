@@ -6,7 +6,7 @@
 
 using namespace std;
 
-int Size = 10;
+const int Size = 10;
 
 int input_ar(int scores[], int n);
 void display_ar(int scores[], int count);
@@ -30,7 +30,7 @@ int input_ar(int scores[], int n)
     int count = 0;
     for(i = 0; i < n; i++)
     {    
-        while (!(cin >> scores[i])) 
+        if (!(cin >> scores[i])) 
         {
             cin.clear(); 
             return count;
