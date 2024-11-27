@@ -16,8 +16,13 @@ int main()
 {
     int scores[Size] = {0};
     int count = input_ar(scores, Size);
-    display_ar(scores, count);
-    cout << "Average = " << average(scores, count) << endl;
+    if (count > 0)
+    {
+        display_ar(scores, count);
+        cout << "Average = " << average(scores, count) << endl;
+    }
+    else
+        cout << "No scores entered. Bye." << endl;
     
     return 0;
 }
