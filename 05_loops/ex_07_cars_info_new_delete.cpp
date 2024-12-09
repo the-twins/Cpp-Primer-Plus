@@ -24,14 +24,15 @@ struct cars {
     string make_car;
     unsigned short year_made;
 };
+const short MaxCar = 10;
 
 int main()
 {
-    cout << "How many cars do you wish to catalog? ";
-    unsigned short count_cars;
+    cout << "How many cars do you wish to catalog (up to 10)? ";
+    short count_cars;
     unsigned short i;
     cin >> count_cars;
-    if(count_cars <= 0)
+    if(count_cars <= 0 || count_cars > MaxCar)
     {
         cout << "Input error. Bye." << endl;
         return 0;
