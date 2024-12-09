@@ -19,15 +19,16 @@ struct contribution{
 };
 
 const double Grand = 10000.0;
+const short MaxPatrons = 10;
 
 int main()
 {
-    cout << "Enter the number of contributors: ";
-    unsigned short count;
-    unsigned short i;
-    unsigned short counter = 0;
+    cout << "Enter the number of contributors (up to 10): ";
+    short count;
+    short i;
+    short counter = 0;
     cin >> count;
-    if (count <= 0)
+    if (count <= 0 || count > MaxPatrons)
     {
         cout << "Input error. Bye." << endl;
         return 0;
@@ -46,7 +47,7 @@ int main()
     {
         if(donat_list[i].donate >= Grand)
         {
-            cout << donat_list[i].name << " " << donat_list[i].donate << "$" << endl;
+            cout << donat_list[i].name << " $" << donat_list[i].donate << endl;
             counter++;
         }
     }
@@ -58,7 +59,7 @@ int main()
     {
         if(donat_list[i].donate < Grand)
         {
-            cout << donat_list[i].name << " " << donat_list[i].donate << "$" << endl;
+            cout << donat_list[i].name << " $" << donat_list[i].donate <<endl;
             counter++;
         }
     }
