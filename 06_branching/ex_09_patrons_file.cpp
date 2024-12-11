@@ -24,6 +24,7 @@ struct contribution{
 
 const double Grand = 10000.0;
 const short Size = 30;
+const short Max = 10;
 
 int main()
 {
@@ -38,11 +39,11 @@ int main()
         cout << "Program terminating.\n";
         exit(EXIT_FAILURE);
     }
-    unsigned short count;
-    unsigned short i;
-    unsigned short counter = 0;
+    short count;
+    short i;
+    short counter = 0;
     (inFile >> count).get();
-    if (count <= 0)
+    if (count <= 0 || count > Max)
     {
         cout << "Input error. Bye." << endl;
         return 0;
