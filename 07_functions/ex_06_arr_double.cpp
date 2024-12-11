@@ -23,9 +23,17 @@ int main()
     double number[n];
     int count = 0;
     count = Fill_array(number, n);
+    cout << "YOUR ARRAY" << endl;
     Show_array(number, count);
     Reverse_array(number, count);
+    cout << "REVERSE ARRAY" << endl;
     Show_array(number, count);
+    if(count > 2)
+    {
+        cout << "REVERSE FOR INTERNAL ELEMENTS" << endl;
+        Reverse_array(number + 1, count-2);
+        Show_array(number, count);
+    }
     
     return 0;
 }
@@ -39,7 +47,15 @@ int Fill_array(double number[], int n)
     {        
         cin >> number[i];
         if(!number[i])
-            return count;
+        {
+            if(number[i] == 0)
+            {
+                count++;
+                continue;
+            }
+            else
+                return count;
+        }
         count++;
     }
     return count;
@@ -47,7 +63,6 @@ int Fill_array(double number[], int n)
 
 void Show_array(double number[], int n)
 {
-    cout << "ARRAY" << endl;
     for(int i = 0; i < n; i++)
         cout << number[i] << endl;
 }
@@ -62,5 +77,4 @@ void Reverse_array(double number[], int n)
         number[i] = number[j];
         number[j] = temp;
     }
-    cout << "REVERSE" << endl;
 }
