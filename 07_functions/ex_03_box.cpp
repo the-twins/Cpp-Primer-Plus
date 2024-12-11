@@ -32,7 +32,7 @@ int main()
 {
     struct box great_box;
     cout << "Enter maker name: ";
-    cin >> great_box.maker;
+    cin.getline(great_box.maker, 40);
     cout << "Enter height: ";
     cin >> great_box.height;
     cout << "Enter width: ";
