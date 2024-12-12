@@ -1,3 +1,4 @@
+
 // Write a program that uses the following functions: Fill_array() takes as arguments the name of 
 // an array of double values and an array size. It prompts the user to enter double values to be 
 // entered in the array. It ceases taking input when the array is full or when the user enters 
@@ -46,15 +47,11 @@ int Fill_array(double number[], int n)
     for(i = 0; i < n; i++)
     {        
         cin >> number[i];
-        if(!number[i])
+        if(!cin)
         {
-            if(number[i] == 0)
-            {
-                count++;
-                continue;
-            }
-            else
-                return count;
+            cin.clear();
+            cin.get();
+            return count;
         }
         count++;
     }
