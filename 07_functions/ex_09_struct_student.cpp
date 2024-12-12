@@ -1,6 +1,7 @@
 // This exercise provides practice in writing functions dealing with arrays and structures. The 
 // following is a program skeleton. Complete it by providing the described functions:
 #include <iostream>
+#include <cstring>
 using namespace std;
 const int SLEN = 30;
 struct student {
@@ -54,7 +55,7 @@ int getinfo(student pa[], int n)
     {
         cout << "Enter fullname (blank line to quit): ";
         cin.getline(pa[i].fullname, SLEN);
-        if(!pa[i].fullname)
+        if(pa[i].fullname[0] == '\0')
             return count;
         cout << "Enter hobby: ";
         cin.getline(pa[i].hobby, SLEN);
